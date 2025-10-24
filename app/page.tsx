@@ -1,5 +1,7 @@
+import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import WhyChoose from "@/components/WhyChoose";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <div>
       <Header/>
       <Hero/>
+      <WhyChoose/>
+      <Experience/>
     </div>
   );
 }
