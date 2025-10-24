@@ -54,8 +54,8 @@ export default function Benefits() {
           </div>
 
           {/* Right - Benefits Content */}
-          <div>
-            {/* Heading */}
+          <div className="text-center lg:text-left">
+            {/* Heading - centered on mobile, left-aligned on desktop */}
             <h2 className="font-extrabold text-3xl sm:text-4xl md:text-[2.75rem] leading-tight mb-10">
               Exclusive <span className="text-[#0268B6]">JEET </span>
               <span className="text-[#6CB746]">SARTHI</span>
@@ -64,9 +64,9 @@ export default function Benefits() {
             </h2>
 
             {/* Top Row - First 2 Benefits */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mb-6 text-left">
               {benefits.slice(0, 2).map((benefit, index) => (
-                <div key={index} className="flex flex-col">
+                <div key={index} className="flex flex-col items-center sm:items-start">
                   <div className="mb-3">
                     <Image
                       src={benefit.icon}
@@ -76,10 +76,10 @@ export default function Benefits() {
                       className="w-12 h-12 sm:w-16 sm:h-16"
                     />
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5 text-center sm:text-left">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-700 text-sm leading-relaxed">
+                  <p className="text-slate-700 text-sm leading-relaxed text-center sm:text-left">
                     {benefit.description}
                   </p>
                 </div>
@@ -90,9 +90,9 @@ export default function Benefits() {
             <div className="h-px bg-slate-300 mb-6" />
 
             {/* Bottom Row - Last 2 Benefits */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mb-8 text-left">
               {benefits.slice(2, 4).map((benefit, index) => (
-                <div key={index} className="flex flex-col">
+                <div key={index} className="flex flex-col items-center sm:items-start">
                   <div className="mb-3">
                     <Image
                       src={benefit.icon}
@@ -102,18 +102,18 @@ export default function Benefits() {
                       className="w-12 h-12 sm:w-16 sm:h-16"
                     />
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5 text-center sm:text-left">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-700 text-sm leading-relaxed">
+                  <p className="text-slate-700 text-sm leading-relaxed text-center sm:text-left">
                     {benefit.description}
                   </p>
                 </div>
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="mt-8">
+            {/* CTA Button - centered on mobile, left-aligned on desktop */}
+            <div className="mt-8 flex justify-center lg:justify-start">
               <button className="px-12 py-4 bg-[#0268B6] text-white text-lg font-semibold rounded-lg hover:bg-[#0256a0] active:bg-[#024587] transition-colors shadow-lg">
                 Enroll For Mentorship
               </button>
